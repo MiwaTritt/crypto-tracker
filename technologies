@@ -1,0 +1,41 @@
+backend
+    node js
+    graphql
+
+frontend
+    web
+        react
+        redux
+        webpack babel
+        yarn
+
+    react native
+        react native
+        webpac
+
+infrastructure
+    platform
+        ec2 instances
+        firebase
+        elastic beanstalk
+    data
+        relational sql db
+
+
+data   
+    user
+        coin watchlist
+        coin ranking
+    coin    
+        target price
+        notes
+            private
+            public
+        bought
+            satoshi
+            usd
+        current price  
+            exchanges
+            coinmarketcap
+        dates
+            expiration date
