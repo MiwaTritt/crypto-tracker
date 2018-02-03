@@ -11,14 +11,11 @@ const INDEX_JS = "./src/index.js";
 module.exports = {
   entry: INDEX_JS,
   output: {
-    path: path.resolve("dist"),
+    path: path.resolve(__dirname, "dist"),
     filename: "index_bundle.js"
   },
   resolve: {
-    modules: [
-      path.resolve('./src'),
-      path.resolve('./node_modules')
-    ]
+    modules: [path.resolve("./src"), path.resolve("./node_modules")]
   },
   devServer: {
     inline: true,
@@ -29,7 +26,8 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, loader: "babel-loader", exclude: /node_modules/ },
-      { test: /\.jsx$/, loader: "babel-loader", exclude: /node_modules/ }
+      { test: /\.jsx$/, loader: "babel-loader", exclude: /node_modules/ },
+      { test:/\.(s*)css$/, use:['style-loader','css-loader', 'sass-loader'] }
     ]
   },
   plugins: [
@@ -40,7 +38,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       {
-        from: "src/static"
+        from: "src/images"
       }
     ])
   ]
