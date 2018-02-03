@@ -5,17 +5,17 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 //config
-const INDEX_HTML = "./src/index.html";
-const INDEX_JS = "./src/index.js";
+const INDEX_HTML = path.resolve(__dirname, "src/index.html");
+const INDEX_JS = path.resolve(__dirname, "src/index.js");
 
 module.exports = {
   entry: INDEX_JS,
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "index_bundle.js"
+    filename: "bundle.js"
   },
   resolve: {
-    modules: [path.resolve("./src"), path.resolve("./node_modules")]
+    modules: [ path.resolve(__dirname, "src"), path.resolve(__dirname, "node_modules") ]
   },
   devServer: {
     inline: true,
@@ -25,9 +25,8 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.js$/, loader: "babel-loader", exclude: /node_modules/ },
-      { test: /\.jsx$/, loader: "babel-loader", exclude: /node_modules/ },
-      { test:/\.(s*)css$/, use:['style-loader','css-loader', 'sass-loader'] }
+      { test: /\.(js|jsx)$/, loader: "babel-loader", exclude: /node_modules/ },
+      { test: /\.(s*)css$/, use: ["style-loader", "css-loader", "sass-loader"] }
     ]
   },
   plugins: [
