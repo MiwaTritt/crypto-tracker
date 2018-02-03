@@ -15,7 +15,7 @@ module.exports = {
     filename: "bundle.js"
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.json'],
+    extensions: ['', '.js', '.jsx', '.json'],
     modules: [ path.resolve(__dirname, "src"), path.resolve(__dirname, "node_modules") ]
   },
   devServer: {
