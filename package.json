@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack"
+    "build": "webpack --progress --color --display-error-details"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
