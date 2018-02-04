@@ -1,4 +1,4 @@
-# crypto-tracker
-[![Build Status](https://travis-ci.org/MiwaTritt/crypto-tracker.svg?branch=master)](https://travis-ci.org/MiwaTritt/crypto-tracker)
-[![dependencies](https://david-dm.org/MiwaTritt/crypto-tracker.svg)](https://david-dm.org/MiwaTritt/crypto-tracker)
-[![devDependency Status](https://david-dm.org/MiwaTritt/crypto-tracker/dev-status.svg)](https://david-dm.org/MiwaTritt/crypto-tracker#info=devDependencies)
+# crypto-tracker-frontend
+[![Build Status](https://travis-ci.org/MiwaTritt/crypto-tracker-frontend.svg?branch=master)](https://travis-ci.org/MiwaTritt/crypto-tracker-frontend)
+[![dependencies](https://david-dm.org/MiwaTritt/crypto-tracker-frontend.svg)](https://david-dm.org/MiwaTritt/crypto-tracker-frontend)
+[![devDependency Status](https://david-dm.org/MiwaTritt/crypto-tracker-frontend/dev-status.svg)](https://david-dm.org/MiwaTritt/crypto-tracker-frontend#info=devDependencies)
