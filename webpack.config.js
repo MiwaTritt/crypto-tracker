@@ -9,7 +9,7 @@ const INDEX_HTML = path.resolve(__dirname, "src/index.html");
 const INDEX_JS = path.resolve(__dirname, "src/index.js");
 
 module.exports = {
-  entry: INDEX_JS,
+  entry: ["whatwg-fetch", INDEX_JS],
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
@@ -21,13 +21,29 @@ module.exports = {
   devServer: {
     inline: true,
     contentBase: "./src",
+    compress: true,
     port: 8100,
     historyApiFallback: true
   },
   module: {
-    loaders: [
-      { test: /\.(js|jsx)$/, loader: "babel-loader", exclude: /node_modules/ },
-      { test: /\.(s*)css$/, use: ["style-loader", "css-loader", "sass-loader"] }
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      },
+      {
+        test: /\.(s*)css$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader"
+          },
+          { loader: "sass-loader" }
+        ]
+      }
     ]
   },
   plugins: [
